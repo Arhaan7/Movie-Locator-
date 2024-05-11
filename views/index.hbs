@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>{{ title }}</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0;
+        }
+        .centered {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            height: 50vh; /* Reduce the height to raise the search bar */
+        }
+        h1 {
+            text-align: left; /* Align the welcome message to the left */
+        }
+        h2 {
+            text-align: center;
+        }
+        form {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+        input[type="text"] {
+            width: 300%; /* Increase the width to make the search bar longer */
+            padding: 10px;
+            margin: 10px 0;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+        button {
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            background-color: #007BFF;
+            color: white;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+        .bottom {
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            padding: 20px 0;
+        }
+        .bottom button {
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            background-color: #007BFF;
+            color: white;
+            cursor: pointer;
+        }
+        .bottom button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="top">
+        <button id="getUsers">See Users</button>
+    </div>
+
+    <h1>Welcome, {{ username }}!</h1>
+    <p>{{ message }}</p>
+    <!-- Add the search form here, lets user search movies using a search bar -->
+    <div class="centered">
+        <h2>Search for a Movie</h2>
+        <form id="searchForm" action="/search" method="get">
+            <input type="text" name="q" placeholder="Enter movie title">
+            <button type="submit">Search</button>
+        </form>
+    </div>
+    <!-- Add a button to see favourited movies -->
+    <div class="bottom">
+        <button id="getFavourites">See Favourited Movies</button>
+    </div>
+    <script src="eventListener.js"></script>
+</body>
+</html>

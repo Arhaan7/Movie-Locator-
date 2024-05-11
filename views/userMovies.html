@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Favourite Movies</title>
+</head>
+<body>
+
+<!-- Start of the movies list -->
+<h3>Favourited Movies of Users on the server</h3>
+
+{{#each movies}}
+  <!-- Movie title -->
+  <p>
+    Movie: {{this}}
+  </p>
+{{/each}}
+<!-- End of the movies list -->
+<!-- Button to go back to the login page -->
+<button id="goBack">Go back to login page</button>
+<script src="eventListener.js"></script>
+
+</body>
+</html>

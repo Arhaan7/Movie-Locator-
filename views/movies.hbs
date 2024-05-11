@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Search Results</title>
+    <!--styling the button--> 
+    <style>
+        #homeButton {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+        }
+    </style>
+</head>
+<body>
+    <button id="homeButton">Go to Homepage</button>
+
+
+    <h1>Search Results</h1>
+    <!--Displaying th search results and movie posters of every movie-->
+    {{#each movies}}
+        <div>
+            <h2>{{Title}}</h2>
+            <img src="{{Poster}}" alt="{{Title}}">
+            <p>Year: {{Year}}</p>
+            <p>Type: {{Type}}</p>
+            <button class="favouriteButton" data-title="{{Title}}">Add to Favourites</button>
+        </div>
+    {{/each}}
+    <script src="eventListener.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Movie Site Users</title>
+</head>
+<body>
+<!-- Start of the footer -->
+<hr/>
+<h3>Users of the Movie Site</h3>
+
+<!-- Start of the users list -->
+{{#each users}}
+  <!-- User details -->
+  <p>
+    User: {{this.userid}}, Password: {{this.password}}, Role: {{this.role}}
+  </p>
+{{/each}}
+<!-- End of the users list -->
+
+<!-- Go Home button -->
+<button id="goHome">Go Home</button>
+
+<h3>Made By: Arhaan Wazid</h3>
+<!-- Event Listener file -->
+<script src="eventListener.js"></script>
+</body>
+</html>
+<!-- End of the footer -->
