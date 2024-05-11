@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Movie Site</title>
+    <style>
+        /* Center the buttons */
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            flex-direction: column; /* Add this line to align items vertically */
+        }
+        
+        /* Style the buttons */
+        button {
+            padding: 10px 20px;
+            margin: 5px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            background-color: #007bff; /* Blue color */
+            color: #fff; /* White text color */
+        }
+
+        button:hover {
+            background-color: #0056b3; /* Darker blue on hover */
+        }
+
+        /* Style the form */
+        form {
+            display: none; /* Hide the form initially */
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <button id="login">Login</button>
+    <button id="newUser">Create New User</button>
+    <!-- to create the new user  -->
+    <form action="/create-user" method="post">
+        <label for="username">User ID:</label><br>
+        <input type="text" id="username" name="username" required><br>
+        <label for="password">Password:</label><br>
+        <input type="password" id="password" name="password" required><br>
+        <input type="submit" value="Create User">
+    </form>
+    <!-- script to add event listener -->
+    <script src="eventListener.js"></script>
+</body>
+</html>
